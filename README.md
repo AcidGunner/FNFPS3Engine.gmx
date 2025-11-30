@@ -1,4 +1,4 @@
 # FNFPS3Engine.gmx
 Friday Night Funkin PS3 Engine!!
 
-doing everything again cuz i ACCIDENTALLY deleted the project file :(
+For compiling use GameMaker 1.4.9999
