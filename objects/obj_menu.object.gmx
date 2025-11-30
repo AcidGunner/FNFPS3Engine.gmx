@@ -25,17 +25,41 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = 1;
-image_yscale = 1;
+            <string>loading = 0;
+select = 0;
+select2 = 1;
+dif_count = 2;
+song_count = ds_list_size(global.song_list);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(0,0,obj_game)
+with obj_game
+{
+    var song_name = global.song_list[| obj_menu.select]
+    load_song(song_name);
+}
 
-sprite_index = -1;
-
-base_x = x;
-condition = 0;
-hit_y = global.offset_y;
-diff = 0;
-hit = false;
-inside_y = 0;
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -58,45 +82,31 @@ inside_y = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!isPlayer)
+            <string>if obj_input.start &amp;&amp; loading = 0
 {
-    y -= speed;
-    if (y &lt; global.offset_y) instance_destroy();
-    exit;
+    loading = 1;
+    alarm[0]= 10;
+}
+if obj_input.dow
+{
+    if select&lt;song_count-1 select++;
+}
+if obj_input.upp
+{
+    if select&gt;0 select--;
+}
+if obj_input.rig
+{
+    if select2&lt;dif_count select2++;
+}
+if obj_input.lef
+{
+    if select2&gt;0 select2--;
 }
 
-var song_pos = audio_sound_get_track_position(global.stream);
-
-y -= global.scroll_speed;
-var diff = abs(song_pos - note_time - 0.04);
-var hit = false;
-switch (dir)
-{
-    case 0: if obj_input.lef hit = true; break;
-    case 1: if obj_input.dow hit = true; break;
-    case 2: if obj_input.upp hit = true; break;
-    case 3: if obj_input.rig hit = true; break;
-}
-
-var inside_y = (abs(y - global.offset_y - 5) &lt;= 30);
-var perfect = 0.025;
-var good    = 0.050;
-var bad     = 0.070;
-if (inside_y &amp;&amp; hit)
-{
-    if (diff &lt;= perfect) scr_show_score(4);
-    else if (diff &lt;= good) scr_show_score(3);
-    else if (diff &lt;= bad) scr_show_score(2);
-    else scr_show_score(1);
-
-    instance_destroy();
-}
-if (y &lt; global.offset_y - 100)
-{
-    scr_show_score(0);
-    instance_destroy();
-}
-
+if select2==0 global.difficulty="easy"
+else if select2==1 global.difficulty="normal"
+else global.difficulty="hard";
 </string>
           </argument>
         </arguments>
@@ -119,16 +129,33 @@ if (y &lt; global.offset_y - 100)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var arrow_dir;
-var colour;
-switch (dir)
+            <string>draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_colour(c_white);
+if loading = 0
 {
-    case 0: arrow_dir=-180; colour=c_purple; break;
-    case 1: arrow_dir=-90; colour=c_blue; break;
-    case 2: arrow_dir=90; colour=c_green; break;
-    case 3: arrow_dir=0; colour=c_red; break;
+    draw_text(640,360,
+    "LEFT/RIGHT - Choose difficulty
+UP/DOWN - Select the song
+START - Play the selected song# #Difficulty: "+string_upper(global.difficulty))
+    draw_set_colour(c_white);
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    
+    draw_text(0,0,"SONG LIST");
+    for (var i = 0; i &lt; ds_list_size(global.song_list); i++)
+    {
+        var song_file = global.song_list[| i];
+        if select == i draw_set_colour(c_yellow);
+        else draw_set_colour(c_white);
+        draw_text(0,30+i*30,string(i+1) + ": " + song_file);
+    }
 }
-draw_sprite_ext(global.spr_arrow, 0, base_x, y, 0.5, 0.5, arrow_dir, colour, 1);
+else
+    draw_text(640,360,"Loading...")
+draw_set_colour(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 </string>
           </argument>
         </arguments>

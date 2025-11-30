@@ -25,22 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// --- Load song &amp; chart ---
-
-// receptors
+            <string>/// Loading time..
+temp_timer=0;
 var px = global.player_offset_x;
 for (var i = 0; i &lt; 4; i++)
 {
     instance_create(px + i*80, global.offset_y-5, obj_receptor);
+    with obj_receptor
+    {
+        var px = global.player_offset_x;
+        dir = (x-px)/80;
+    }
 }
 
 var bx = global.opponent_offset_x;
 for (var i = 0; i &lt; 4; i++)
 {
-    instance_create(bx + i*80, global.offset_y-5, obj_receptor);
+    instance_create(bx + i*80, global.offset_y-5, obj_receptor2);
+    with obj_receptor2
+    {
+        var bx = global.opponent_offset_x;
+        dir = (x-bx)/80;
+    }
 }
 
-// note scroll direction: up (classic FNF)
 note_spawn_y = global.offset_y+600;
 hit_y = global.offset_y;
 global.countdown_state = 0;
@@ -48,6 +56,7 @@ song_pos = 0;
 score = 0;
 global.life = 50;
 
+// set path?
 sfx_path = working_directory + "sounds/";
 snd_count3 = audio_create_stream(sfx_path + "intro3.ogg");
 snd_count2 = audio_create_stream(sfx_path + "intro2.ogg");
@@ -76,10 +85,14 @@ snd_go = audio_create_stream(sfx_path + "introGo.ogg");
           <argument>
             <kind>1</kind>
             <string>/// Notes
+temp_timer++;
+
+if temp_timer&gt;=360 &amp;&amp; song_pos = 0
+    unload_song();
 
 if (!global.song_started)
 {
-    global.song_delay -= delta_time/1000000; // or: 1/room_speed
+    global.song_delay -= delta_time/1000000;
 
     if (global.song_delay &lt;= 0)
     {
@@ -89,7 +102,6 @@ if (!global.song_started)
     }
     else
     {
-        // IMPORTANT: make fake song_pos negative
         song_pos = -global.song_delay;
     }
 }
@@ -98,14 +110,8 @@ else
     song_pos = audio_sound_get_track_position(global.stream);
 }
 
-// distance from spawn Y to receptor
 var distance = (room_height + 50) - global.offset_y; 
-
-// speed = pixels per step, step = 1/room_speed seconds
-// convert speed to pixels per second:
 var speed_per_sec = global.scroll_speed * room_speed; 
-
-// spawn_offset in seconds = distance / speed_per_sec
 var spawn_offset = distance / speed_per_sec;
 
 for (var i = 0; i &lt; ds_list_size(global.notes); i++)
@@ -123,9 +129,11 @@ for (var i = 0; i &lt; ds_list_size(global.notes); i++)
         else
             offset_base = global.opponent_offset_x;
         
-        var nx = offset_base + dir * 80;  // 80 = lane spacing
-        var ny = room_height + 50; // spawn 50 pixels below the bottom of the room
+        var nx = offset_base + dir * 80;
+        var ny = room_height + 50;
         
+        // to be honest i still dont understand any of
+        // ds stuff. but i think im learning a bit :P
         var inst = instance_create(nx, ny, obj_note);
         inst.note_time = t;
         inst.dir       = dir;
@@ -159,7 +167,8 @@ for (var i = 0; i &lt; ds_list_size(global.notes); i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(2,2,"
+            <string>// draw info if need
+draw_text(2,2,"
 
 
 
@@ -176,55 +185,56 @@ SCORE: " + string(score) +"
 ================
 ");
 
-// Draw Event
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(c_white);
 
-draw_healthbar(390,680,890,690,global.life,c_red,c_lime,c_lime,1,true,true);
+//Health bar stuff
+var healthbar_y = 660;
+draw_healthbar(390,healthbar_y,890,healthbar_y+10,global.life,c_red,c_lime,c_lime,1,true,true);
+if global.life &lt; 15
+    draw_sprite_ext(global.icon0_1,0,930-(global.life*5),healthbar_y+5,-0.5,0.5,0,c_white,1);
+else
+    draw_sprite_ext(global.icon0_0,0,930-(global.life*5),healthbar_y+5,-0.5,0.5,0,c_white,1);
+
+if global.life &gt; 85
+    draw_sprite_ext(global.icon1_1,0,850-(global.life*5),healthbar_y+5,0.5,0.5,0,c_white,1);
+else
+    draw_sprite_ext(global.icon1_0,0,850-(global.life*5),healthbar_y+5,0.5,0.5,0,c_white,1);
 
 if (!global.song_started)
 {
     var beat = global.sec_per_beat;
-
-    // ----- "3" -----
     if (song_pos &gt;= -(4 * beat) &amp;&amp; song_pos &lt; -(3 * beat))
     {
         draw_text(640, 360, "3");
-
         if (global.countdown_state &lt; 1)
         {
             audio_play_sound(snd_count3, 1, false);
             global.countdown_state = 1;
         }
     }
-    // ----- "2" -----
     else if (song_pos &gt;= -(3 * beat) &amp;&amp; song_pos &lt; -(2 * beat))
     {
         draw_text(640, 360, "2");
-
         if (global.countdown_state &lt; 2)
         {
             audio_play_sound(snd_count2, 1, false);
             global.countdown_state = 2;
         }
     }
-    // ----- "1" -----
     else if (song_pos &gt;= -(2 * beat) &amp;&amp; song_pos &lt; -(beat))
     {
         draw_text(640, 360, "1");
-
         if (global.countdown_state &lt; 3)
         {
             audio_play_sound(snd_count1, 1, false);
             global.countdown_state = 3;
         }
     }
-    // ----- "GO!" -----
     else if (song_pos &gt;= -(beat) &amp;&amp; song_pos &lt; 0)
     {
         draw_text(640, 360, "GO!");
-
         if (global.countdown_state &lt; 4)
         {
             audio_play_sound(snd_go, 1, false);

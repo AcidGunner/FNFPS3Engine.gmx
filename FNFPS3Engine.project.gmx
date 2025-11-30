@@ -3,13 +3,13 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="58" name="datafiles">
-    <datafiles number="58" name="images">
-      <datafiles number="58" name="userinterface">
-        <datafiles number="58" name="icons">
-          <datafiles number="58" name="bf">
+  <datafiles number="59" name="datafiles">
+    <datafiles number="59" name="images">
+      <datafiles number="59" name="userinterface">
+        <datafiles number="59" name="icons">
+          <datafiles number="59" name="bf">
             <datafile>
-              <name>test_0_0.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>7478</size>
               <exportAction>2</exportAction>
@@ -23,10 +23,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_0.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_1.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>8449</size>
               <exportAction>2</exportAction>
@@ -40,12 +40,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_1.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="gf">
+          <datafiles number="59" name="gf">
             <datafile>
-              <name>test_0_16.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>9851</size>
               <exportAction>2</exportAction>
@@ -59,12 +59,29 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_16.png</filename>
+              <filename>normal.png</filename>
+            </datafile>
+            <datafile>
+              <name>warning.png</name>
+              <exists>-1</exists>
+              <size>9851</size>
+              <exportAction>2</exportAction>
+              <exportDir></exportDir>
+              <overwrite>0</overwrite>
+              <freeData>-1</freeData>
+              <removeEnd>0</removeEnd>
+              <store>0</store>
+              <ConfigOptions>
+                <Config name="Default">
+                  <CopyToMask>9223372036854775807</CopyToMask>
+                </Config>
+              </ConfigOptions>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="daddy">
+          <datafiles number="59" name="dad">
             <datafile>
-              <name>test_0_12.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>11460</size>
               <exportAction>2</exportAction>
@@ -78,10 +95,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_12.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_13.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>11449</size>
               <exportAction>2</exportAction>
@@ -95,12 +112,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_13.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="spookez">
+          <datafiles number="59" name="spooky">
             <datafile>
-              <name>test_0_2.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>5024</size>
               <exportAction>2</exportAction>
@@ -114,10 +131,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_2.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_3.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>5039</size>
               <exportAction>2</exportAction>
@@ -131,12 +148,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_3.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="pico">
+          <datafiles number="59" name="pico">
             <datafile>
-              <name>test_0_4.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>7285</size>
               <exportAction>2</exportAction>
@@ -150,10 +167,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_4.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_5.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>8094</size>
               <exportAction>2</exportAction>
@@ -167,12 +184,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_5.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="mommy">
+          <datafiles number="59" name="mom">
             <datafile>
-              <name>test_0_6.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>6114</size>
               <exportAction>2</exportAction>
@@ -186,10 +203,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_6.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_7.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>7030</size>
               <exportAction>2</exportAction>
@@ -203,12 +220,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_7.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="mommyanddaddy">
+          <datafiles number="59" name="parents-christmas">
             <datafile>
-              <name>test_0_17.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>14481</size>
               <exportAction>2</exportAction>
@@ -222,10 +239,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_17.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_18.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>14481</size>
               <exportAction>2</exportAction>
@@ -239,12 +256,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_18.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="lemondemon">
+          <datafiles number="59" name="monster">
             <datafile>
-              <name>test_0_19.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>9273</size>
               <exportAction>2</exportAction>
@@ -258,10 +275,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_19.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_20.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>9588</size>
               <exportAction>2</exportAction>
@@ -275,12 +292,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_20.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="bfpixel">
+          <datafiles number="59" name="bf-pixel">
             <datafile>
-              <name>test_0_21.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>929</size>
               <exportAction>2</exportAction>
@@ -294,12 +311,29 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_21.png</filename>
+              <filename>normal.png</filename>
+            </datafile>
+            <datafile>
+              <name>warning.png</name>
+              <exists>-1</exists>
+              <size>929</size>
+              <exportAction>2</exportAction>
+              <exportDir></exportDir>
+              <overwrite>0</overwrite>
+              <freeData>-1</freeData>
+              <removeEnd>0</removeEnd>
+              <store>0</store>
+              <ConfigOptions>
+                <Config name="Default">
+                  <CopyToMask>9223372036854775807</CopyToMask>
+                </Config>
+              </ConfigOptions>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="senpai">
+          <datafiles number="59" name="senpai">
             <datafile>
-              <name>test_0_22.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>766</size>
               <exportAction>2</exportAction>
@@ -313,12 +347,29 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_22.png</filename>
+              <filename>normal.png</filename>
+            </datafile>
+            <datafile>
+              <name>warning.png</name>
+              <exists>-1</exists>
+              <size>766</size>
+              <exportAction>2</exportAction>
+              <exportDir></exportDir>
+              <overwrite>0</overwrite>
+              <freeData>-1</freeData>
+              <removeEnd>0</removeEnd>
+              <store>0</store>
+              <ConfigOptions>
+                <Config name="Default">
+                  <CopyToMask>9223372036854775807</CopyToMask>
+                </Config>
+              </ConfigOptions>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="spirit">
+          <datafiles number="59" name="spirit">
             <datafile>
-              <name>test_0_23.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>879</size>
               <exportAction>2</exportAction>
@@ -332,12 +383,29 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_23.png</filename>
+              <filename>normal.png</filename>
+            </datafile>
+            <datafile>
+              <name>warning.png</name>
+              <exists>-1</exists>
+              <size>879</size>
+              <exportAction>2</exportAction>
+              <exportDir></exportDir>
+              <overwrite>0</overwrite>
+              <freeData>-1</freeData>
+              <removeEnd>0</removeEnd>
+              <store>0</store>
+              <ConfigOptions>
+                <Config name="Default">
+                  <CopyToMask>9223372036854775807</CopyToMask>
+                </Config>
+              </ConfigOptions>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="tankman">
+          <datafiles number="59" name="tankman">
             <datafile>
-              <name>test_0_8.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>2771</size>
               <exportAction>2</exportAction>
@@ -351,10 +419,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_8.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_9.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>3283</size>
               <exportAction>2</exportAction>
@@ -368,12 +436,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_9.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="test1">
+          <datafiles number="59" name="test1">
             <datafile>
-              <name>test_0_10.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>3115</size>
               <exportAction>2</exportAction>
@@ -387,10 +455,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_10.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_11.png</name>
+              <name>_11.png</name>
               <exists>-1</exists>
               <size>3452</size>
               <exportAction>2</exportAction>
@@ -404,12 +472,12 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_11.png</filename>
+              <filename>_11.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="58" name="test2">
+          <datafiles number="59" name="test2">
             <datafile>
-              <name>test_0_14.png</name>
+              <name>normal.png</name>
               <exists>-1</exists>
               <size>3290</size>
               <exportAction>2</exportAction>
@@ -423,10 +491,10 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_14.png</filename>
+              <filename>normal.png</filename>
             </datafile>
             <datafile>
-              <name>test_0_15.png</name>
+              <name>warning.png</name>
               <exists>-1</exists>
               <size>3736</size>
               <exportAction>2</exportAction>
@@ -440,14 +508,31 @@
                   <CopyToMask>9223372036854775807</CopyToMask>
                 </Config>
               </ConfigOptions>
-              <filename>test_0_15.png</filename>
+              <filename>warning.png</filename>
             </datafile>
           </datafiles>
         </datafiles>
+        <datafile>
+          <name>arrow.png</name>
+          <exists>-1</exists>
+          <size>7473</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>arrow.png</filename>
+        </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="58" name="songs">
-      <datafiles number="58" name="tutorial">
+    <datafiles number="59" name="songs">
+      <datafiles number="59" name="tutorial">
         <datafile>
           <name>inst.ogg</name>
           <exists>-1</exists>
@@ -517,7 +602,7 @@
           <filename>hard.json</filename>
         </datafile>
       </datafiles>
-      <datafiles number="58" name="bopeebo">
+      <datafiles number="59" name="bopeebo">
         <datafile>
           <name>normal.json</name>
           <exists>-1</exists>
@@ -604,7 +689,7 @@
           <filename>voices.ogg</filename>
         </datafile>
       </datafiles>
-      <datafiles number="58" name="fresh">
+      <datafiles number="59" name="fresh">
         <datafile>
           <name>normal.json</name>
           <exists>-1</exists>
@@ -691,7 +776,7 @@
           <filename>voices.ogg</filename>
         </datafile>
       </datafiles>
-      <datafiles number="58" name="dadbattle">
+      <datafiles number="59" name="dadbattle">
         <datafile>
           <name>normal.json</name>
           <exists>-1</exists>
@@ -796,7 +881,7 @@
         <filename>list.txt</filename>
       </datafile>
     </datafiles>
-    <datafiles number="58" name="sounds">
+    <datafiles number="59" name="sounds">
       <datafile>
         <name>intro1.ogg</name>
         <exists>-1</exists>
@@ -878,8 +963,8 @@
     <script>scripts\load_song.gml</script>
     <script>scripts\json_globals.gml</script>
     <script>scripts\scr_load_song.gml</script>
-    <script>scripts\scr_debug_raw_sections.gml</script>
     <script>scripts\scr_show_score.gml</script>
+    <script>scripts\unload_song.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_main</font>
@@ -889,9 +974,11 @@
     <object>objects\obj_game</object>
     <object>objects\obj_note</object>
     <object>objects\obj_receptor</object>
+    <object>objects\obj_receptor2</object>
     <object>objects\obj_debug</object>
     <object>objects\obj_input</object>
     <object>objects\obj_status</object>
+    <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_stage</room>

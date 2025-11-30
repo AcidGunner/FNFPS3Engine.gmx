@@ -6,7 +6,7 @@ if temp = 0
 {
     str = "Miss..."
     score-=10
-    global.life-=2;
+    global.life-=4;
 }
 else if temp = 1
 {
@@ -17,19 +17,19 @@ else if temp = 2
 {
     str = "Bad."
     score+=100
-    global.life+=2;
+    global.life+=1;
 }
 else if temp = 3
 {
     str = "Good"
     score+=250
-    global.life+=4;
+    global.life+=2;
 }
 else
 {
     str = "SICK!"
     score+=350
-    global.life+=4;
+    global.life+=2;
 }
 if score<=0 score=0;
 if global.life<0 game_end();

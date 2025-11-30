@@ -1,7 +1,7 @@
 /// scr_load_song(chart_json_path)
-/// Returns ds_list of notes ready to spawn
+/// loads song properly? :_)
 
-// Read JSON file
+// reeead
 var f = file_text_open_read(argument0);
 var txt = "";
 while (!file_text_eof(f)) {
@@ -11,13 +11,13 @@ while (!file_text_eof(f)) {
 file_text_close(f);
 show_debug_message("loading chart please wait..");
 
-// parse JSON (your parser already returns DS maps/lists)
-global.chart = json_parse(txt); // must return DS map
+// json parsing :)
+global.chart = json_parse(txt);
 show_debug_message("loading chart done!");
 show_debug_message("preparing the song data..");
 
 // set info
-var song_map = global.chart[? "song"]; // should be DS map
+var song_map = global.chart[? "song"];
 if (ds_map_exists(song_map, "bpm"))
 {
     global.bpm = song_map[? "bpm"];
@@ -43,11 +43,11 @@ for (var i = 0; i < ds_list_size(raw_sections); i++)
 {
     var section = raw_sections[| i];
     
-    var mustHit = 0; // default
+    var mustHit = 0;
     if (ds_map_exists(section, "mustHitSection"))
     {
         var val = section[? "mustHitSection"];
-        mustHit = (val != 0); // convert 0/1 to false/true
+        mustHit = (val != 0);
     }
     
     var sectionNotes = section[? "sectionNotes"];
@@ -66,20 +66,25 @@ for (var i = 0; i < ds_list_size(raw_sections); i++)
         else
             player_note = (dir >= 4);
             
-        // Create DS map for the note
         var new_note = ds_map_create();
         new_note[? "time"]      = time_ms / 1000;
-        new_note[? "dir"] = dir mod 4;     // convert 4–7 → 0–3
+        new_note[? "dir"] = dir mod 4;
         new_note[? "noteType"]  = noteType;
-        new_note[? "isPlayer"]    = player_note;  // <-- SAVE PLAYER/OPPONENT HERE
+        new_note[? "isPlayer"]    = player_note;
         new_note[? "spawned"]   = false;
 
         ds_list_add(final_notes, new_note);
     }
 }
 
-// store notes globally
+// final steps
 global.notes = final_notes;
 show_debug_message("preparing song data complete!");
+
+var icon_path = working_directory + "images/userinterface/icons/";
+global.icon0_0 = sprite_add(icon_path + global.stage_player1 + "/normal.png", 0, false, false, 75, 75);
+global.icon0_1 = sprite_add(icon_path + global.stage_player1 + "/warning.png", 0, false, false, 75, 75);
+global.icon1_0 = sprite_add(icon_path + global.stage_player2 + "/normal.png", 0, false, false, 75, 75);
+global.icon1_1 = sprite_add(icon_path + global.stage_player2 + "/warning.png", 0, false, false, 75, 75);
 
 return final_notes;

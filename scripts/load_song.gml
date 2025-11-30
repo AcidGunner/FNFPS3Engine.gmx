@@ -1,9 +1,10 @@
 /// load_song(songname)
+// loads song, duh.
 global.song_name = argument0;
 var path = working_directory + "songs/"+argument0+"/";
 var inst_path = path + "inst.ogg";
 var chart_path = path + global.difficulty + ".json";
-show_debug_message("Loading "+chart_path);
+show_debug_message("Loading " + chart_path);
 scr_load_song(chart_path);
 
 // Load music
