@@ -25,22 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>title_list = ds_list_create();
-file = file_text_open_read(working_directory + "other/title.txt");
-while (!file_text_eof(file))
-{
-    var line = file_text_read_string(file);
-    file_text_readln(file);
-    if (string_length(line) &gt; 0)
-    {
-        ds_list_add(title_list, line);
-    }
-}
-file_text_close(file);
+            <string>get_title_stuff();
 
-main_value = irandom_range(0,ds_list_size(title_list)/2-1)
-main_line = ds_list_find_value(title_list,(main_value*2))
-second_line = ds_list_find_value(title_list,(main_value*2+1))
+main_value = irandom_range(0,array_length_1d(global.titleline)/2-1);
+main_line = global.titleline[main_value];
+second_line = global.titleline[main_value+1];
 
 audio_play_sound(global.menu_stream, 0, true);
 switcher=0;

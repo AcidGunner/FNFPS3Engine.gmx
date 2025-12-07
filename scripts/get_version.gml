@@ -1,2 +1,2 @@
 ///get_version();
-return "v0.01";
+return "v0.01 FIX";
