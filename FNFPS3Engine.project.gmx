@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="59" name="datafiles">
-    <datafiles number="59" name="images">
-      <datafiles number="59" name="userinterface">
-        <datafiles number="59" name="icons">
-          <datafiles number="59" name="bf">
+  <datafiles number="75" name="datafiles">
+    <datafiles number="75" name="images">
+      <datafiles number="75" name="userinterface">
+        <datafiles number="75" name="icons">
+          <datafiles number="75" name="bf">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -43,7 +43,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="gf">
+          <datafiles number="75" name="gf">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -79,7 +79,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="dad">
+          <datafiles number="75" name="dad">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -115,7 +115,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="spooky">
+          <datafiles number="75" name="spooky">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -151,7 +151,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="pico">
+          <datafiles number="75" name="pico">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -187,7 +187,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="mom">
+          <datafiles number="75" name="mom">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -223,7 +223,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="parents-christmas">
+          <datafiles number="75" name="parents-christmas">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -259,7 +259,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="monster">
+          <datafiles number="75" name="monster">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -295,7 +295,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="bf-pixel">
+          <datafiles number="75" name="bf-pixel">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -331,7 +331,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="senpai">
+          <datafiles number="75" name="senpai">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -367,7 +367,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="spirit">
+          <datafiles number="75" name="spirit">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -403,7 +403,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="tankman">
+          <datafiles number="75" name="tankman">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -439,7 +439,7 @@
               <filename>warning.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="test1">
+          <datafiles number="75" name="test1">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -475,7 +475,7 @@
               <filename>_11.png</filename>
             </datafile>
           </datafiles>
-          <datafiles number="59" name="test2">
+          <datafiles number="75" name="test2">
             <datafile>
               <name>normal.png</name>
               <exists>-1</exists>
@@ -512,10 +512,31 @@
             </datafile>
           </datafiles>
         </datafiles>
+        <datafiles number="75" name="gameplay">
+          <datafile>
+            <name>arrow.png</name>
+            <exists>-1</exists>
+            <size>7473</size>
+            <exportAction>2</exportAction>
+            <exportDir></exportDir>
+            <overwrite>0</overwrite>
+            <freeData>-1</freeData>
+            <removeEnd>0</removeEnd>
+            <store>0</store>
+            <ConfigOptions>
+              <Config name="Default">
+                <CopyToMask>9223372036854775807</CopyToMask>
+              </Config>
+            </ConfigOptions>
+            <filename>arrow.png</filename>
+          </datafile>
+        </datafiles>
+      </datafiles>
+      <datafiles number="75" name="backgrounds">
         <datafile>
-          <name>arrow.png</name>
+          <name>stageback.png</name>
           <exists>-1</exists>
-          <size>7473</size>
+          <size>172532</size>
           <exportAction>2</exportAction>
           <exportDir></exportDir>
           <overwrite>0</overwrite>
@@ -527,12 +548,46 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>arrow.png</filename>
+          <filename>stageback.png</filename>
+        </datafile>
+        <datafile>
+          <name>menubg.png</name>
+          <exists>-1</exists>
+          <size>241308</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>menubg.png</filename>
+        </datafile>
+        <datafile>
+          <name>loadbg.png</name>
+          <exists>-1</exists>
+          <size>466050</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>loadbg.png</filename>
         </datafile>
       </datafiles>
     </datafiles>
-    <datafiles number="59" name="songs">
-      <datafiles number="59" name="tutorial">
+    <datafiles number="75" name="songs">
+      <datafiles number="75" name="tutorial">
         <datafile>
           <name>inst.ogg</name>
           <exists>-1</exists>
@@ -602,7 +657,7 @@
           <filename>hard.json</filename>
         </datafile>
       </datafiles>
-      <datafiles number="59" name="bopeebo">
+      <datafiles number="75" name="bopeebo">
         <datafile>
           <name>normal.json</name>
           <exists>-1</exists>
@@ -689,7 +744,7 @@
           <filename>voices.ogg</filename>
         </datafile>
       </datafiles>
-      <datafiles number="59" name="fresh">
+      <datafiles number="75" name="fresh">
         <datafile>
           <name>normal.json</name>
           <exists>-1</exists>
@@ -776,7 +831,7 @@
           <filename>voices.ogg</filename>
         </datafile>
       </datafiles>
-      <datafiles number="59" name="dadbattle">
+      <datafiles number="75" name="dadbattle">
         <datafile>
           <name>normal.json</name>
           <exists>-1</exists>
@@ -863,6 +918,180 @@
           <filename>voices.ogg</filename>
         </datafile>
       </datafiles>
+      <datafiles number="75" name="turnabout">
+        <datafile>
+          <name>normal.json</name>
+          <exists>-1</exists>
+          <size>52868</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>normal.json</filename>
+        </datafile>
+        <datafile>
+          <name>hard.json</name>
+          <exists>-1</exists>
+          <size>52868</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>hard.json</filename>
+        </datafile>
+        <datafile>
+          <name>easy.json</name>
+          <exists>-1</exists>
+          <size>52868</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>easy.json</filename>
+        </datafile>
+        <datafile>
+          <name>inst.ogg</name>
+          <exists>-1</exists>
+          <size>2742826</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>inst.ogg</filename>
+        </datafile>
+        <datafile>
+          <name>voices.ogg</name>
+          <exists>-1</exists>
+          <size>14492</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>voices.ogg</filename>
+        </datafile>
+      </datafiles>
+      <datafiles number="75" name="madness">
+        <datafile>
+          <name>normal.json</name>
+          <exists>-1</exists>
+          <size>38434</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>normal.json</filename>
+        </datafile>
+        <datafile>
+          <name>easy.json</name>
+          <exists>-1</exists>
+          <size>34478</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>779092206</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>easy.json</filename>
+        </datafile>
+        <datafile>
+          <name>hard.json</name>
+          <exists>-1</exists>
+          <size>43709</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>hard.json</filename>
+        </datafile>
+        <datafile>
+          <name>inst.ogg</name>
+          <exists>-1</exists>
+          <size>8136972</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>inst.ogg</filename>
+        </datafile>
+        <datafile>
+          <name>voices.ogg</name>
+          <exists>-1</exists>
+          <size>5336379</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>voices.ogg</filename>
+        </datafile>
+      </datafiles>
       <datafile>
         <name>list.txt</name>
         <exists>-1</exists>
@@ -880,8 +1109,25 @@
         </ConfigOptions>
         <filename>list.txt</filename>
       </datafile>
+      <datafile>
+        <name>stages.txt</name>
+        <exists>-1</exists>
+        <size>178</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>stages.txt</filename>
+      </datafile>
     </datafiles>
-    <datafiles number="59" name="sounds">
+    <datafiles number="75" name="sounds">
       <datafile>
         <name>intro1.ogg</name>
         <exists>-1</exists>
@@ -950,6 +1196,42 @@
         </ConfigOptions>
         <filename>introGo.ogg</filename>
       </datafile>
+      <datafile>
+        <name>freakyMenu.ogg</name>
+        <exists>-1</exists>
+        <size>2040005</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>freakyMenu.ogg</filename>
+      </datafile>
+    </datafiles>
+    <datafiles number="75" name="other">
+      <datafile>
+        <name>title.txt</name>
+        <exists>-1</exists>
+        <size>13176680</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>title.txt</filename>
+      </datafile>
     </datafiles>
   </datafiles>
   <NewExtensions>
@@ -965,9 +1247,11 @@
     <script>scripts\scr_load_song.gml</script>
     <script>scripts\scr_show_score.gml</script>
     <script>scripts\unload_song.gml</script>
+    <script>scripts\get_version.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_main</font>
+    <font>fonts\fnt_title</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_first</object>
@@ -979,6 +1263,11 @@
     <object>objects\obj_input</object>
     <object>objects\obj_status</object>
     <object>objects\obj_menu</object>
+    <object>objects\obj_freeplay_menu</object>
+    <object>objects\obj_background</object>
+    <object>objects\obj_credits</object>
+    <object>objects\obj_wait</object>
+    <object>objects\obj_fadeout</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_stage</room>

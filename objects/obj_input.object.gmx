@@ -39,6 +39,10 @@ lef=0;
 rig=0;
 dow=0;
 upp=0;
+mlef=0;
+mrig=0;
+mdow=0;
+mupp=0;
 a=0;
 b=0;
 c=0;
@@ -75,15 +79,19 @@ stick_rv=0;
             <kind>1</kind>
             <string>if (os_type==os_win32 or os_type==os_windows or os_type==os_android)
 {
-    up=keyboard_check(vk_up);
-    down=keyboard_check(vk_down);
-    right=keyboard_check(vk_right);
-    left=keyboard_check(vk_left);
+    up=keyboard_check_pressed(vk_up);
+    down=keyboard_check_pressed(vk_down);
+    right=keyboard_check_pressed(vk_right);
+    left=keyboard_check_pressed(vk_left);
     start=keyboard_check_pressed(vk_enter);
-    lef=keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord('A'));
-    rig=keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord('D'));
-    dow=keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord('S'));
-    upp=keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord('W'));
+    lef=keyboard_check(vk_left) or keyboard_check(ord('A'));
+    rig=keyboard_check(vk_right) or keyboard_check(ord('D'));
+    dow=keyboard_check(vk_down) or keyboard_check(ord('S'));
+    upp=keyboard_check(vk_up) or keyboard_check(ord('W'));
+    mlef=keyboard_check_pressed(vk_left);
+    mrig=keyboard_check_pressed(vk_right);
+    mdow=keyboard_check_pressed(vk_down);
+    mupp=keyboard_check_pressed(vk_up);
     a=keyboard_check_pressed(ord('Z'));
     b=keyboard_check_pressed(ord('X'));
     c=keyboard_check_pressed(vk_lshift);
@@ -105,15 +113,19 @@ else if os_type==os_ps3
     var stick_rv=gamepad_axis_value(0,gp_axisrv);
     
     //Last config!
-    up=gamepad_button_check(0,gp_padu) or stick_v&lt;=-gmin;
-    down=gamepad_button_check(0,gp_padd) or stick_v&gt;=gmin;
-    right=gamepad_button_check(0,gp_padr) or stick_h&gt;=gmin;
-    left=gamepad_button_check(0,gp_padl) or stick_h&lt;=-gmin;
+    up=gamepad_button_check_pressed(0,gp_padu) or (stick_v&lt;=-gmin &amp;&amp; global.prev_stick_v&gt;-gmin);
+    down=gamepad_button_check_pressed(0,gp_padd) or (stick_v&gt;=gmin &amp;&amp; global.prev_stick_v&lt;gmin);
+    right=gamepad_button_check_pressed(0,gp_padr) or (stick_h&gt;=gmin &amp;&amp; global.prev_stick_h&lt;gmin);
+    left=gamepad_button_check_pressed(0,gp_padl) or (stick_h&lt;=-gmin &amp;&amp; global.prev_stick_h&gt;-gmin);
     start=gamepad_button_check_pressed(0,gp_start);
-    lef=gamepad_button_check_pressed(0,gp_padl) or gamepad_button_check_pressed(0,gp_face3) or (stick_h&lt;=-gmin &amp;&amp; global.prev_stick_h&gt;-gmin);
-    rig=gamepad_button_check_pressed(0,gp_padr) or gamepad_button_check_pressed(0,gp_face2) or (stick_h&gt;=gmin &amp;&amp; global.prev_stick_h&lt;gmin);
-    dow=gamepad_button_check_pressed(0,gp_padd) or gamepad_button_check_pressed(0,gp_face1) or (stick_v&gt;=gmin &amp;&amp; global.prev_stick_v&lt;gmin);
-    upp=gamepad_button_check_pressed(0,gp_padu) or gamepad_button_check_pressed(0,gp_face4) or (stick_v&lt;=-gmin &amp;&amp; global.prev_stick_v&gt;-gmin);
+    lef=gamepad_button_check(0,gp_padl) or gamepad_button_check(0,gp_face3) or stick_h&lt;=-gmin;
+    rig=gamepad_button_check(0,gp_padr) or gamepad_button_check(0,gp_face2) or stick_h&gt;=gmin;
+    dow=gamepad_button_check(0,gp_padd) or gamepad_button_check(0,gp_face1) or stick_v&gt;=gmin;
+    upp=gamepad_button_check(0,gp_padu) or gamepad_button_check(0,gp_face4) or stick_v&lt;=-gmin;
+    mlef=gamepad_button_check_pressed(0,gp_padl) or (stick_h&lt;=-gmin &amp;&amp; global.prev_stick_h&gt;-gmin);
+    mrig=gamepad_button_check_pressed(0,gp_padr) or (stick_h&gt;=gmin &amp;&amp; global.prev_stick_h&lt;gmin);
+    mdow=gamepad_button_check_pressed(0,gp_padd) or (stick_v&gt;=gmin &amp;&amp; global.prev_stick_v&lt;gmin);
+    mupp=gamepad_button_check_pressed(0,gp_padu) or (stick_v&lt;=-gmin &amp;&amp; global.prev_stick_v&gt;-gmin);
     a=gamepad_button_check_pressed(0,gp_face1);
     b=gamepad_button_check_pressed(0,gp_face2);
     c=gamepad_button_check_pressed(0,gp_face3);

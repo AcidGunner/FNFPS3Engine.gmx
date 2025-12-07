@@ -1,5 +1,6 @@
 ///unload_song();
 // what else do you think it does??
+audio_stop_all();
 var path = working_directory + "songs/"+global.song_name+"/";
 
 //Destroy chart
@@ -19,6 +20,8 @@ if file_exists(path + "voices.ogg")
 //Destroy objects
 with obj_game instance_destroy();
 with obj_receptor instance_destroy();
+with obj_receptor2 instance_destroy();
+with obj_background instance_destroy();
 
 //Go back to menu without reseting the WHOLE game
-instance_create(0,0,obj_menu);
+instance_create(0,0,obj_wait);

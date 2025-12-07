@@ -26,7 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>/// Loading time..
+instance_create(0,0,obj_background);
+instance_create(0,0,obj_fadeout);
+obj_fadeout.col = c_black;
+
 temp_timer=0;
+global.combo = 0;
 var px = global.player_offset_x;
 for (var i = 0; i &lt; 4; i++)
 {
@@ -168,7 +173,7 @@ for (var i = 0; i &lt; ds_list_size(global.notes); i++)
           <argument>
             <kind>1</kind>
             <string>// draw info if need
-draw_text(2,2,"
+if global.show_debug=1 draw_text(2,2,"
 
 
 

@@ -26,13 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>audio_channel_num(20);
+global.show_debug = 0;
 global.offset_x = 520;
 global.offset_y = 100;
 global.player_offset_x    = global.offset_x + 300; // right side
 global.opponent_offset_x  = global.offset_x - 300; // left side
 global.difficulty = "normal";
 global.song_list = ds_list_create();
-global.spr_arrow = sprite_add(working_directory + "images/userinterface/arrow.png",0,false,false,85,85);
+global.stage_list = ds_list_create();
+global.spr_arrow = sprite_add(working_directory + "images/userinterface/gameplay/arrow.png",0,false,false,85,85);
+global.stage_bg = -1;
+randomize();
+
+global.menu_bg = background_add(working_directory + "images/backgrounds/menubg.png",false,false);
+global.load_bg = background_add(working_directory + "images/backgrounds/loadbg.png",false,false);
 
 file = file_text_open_read(working_directory + "songs/list.txt");
 while (!file_text_eof(file))
@@ -45,7 +52,21 @@ while (!file_text_eof(file))
     }
 }
 file_text_close(file);
-instance_create(0,0,obj_menu);
+
+file2 = file_text_open_read(working_directory + "songs/stages.txt");
+while (!file_text_eof(file2))
+{
+    var line2 = file_text_read_string(file2);
+    file_text_readln(file2);
+    if (string_length(line2) &gt; 0)
+    {
+        ds_list_add(global.stage_list, line2);
+    }
+}
+file_text_close(file2);
+
+global.menu_stream = audio_create_stream(working_directory + "sounds/freakyMenu.ogg");
+instance_create(0,0,obj_credits);
 instance_destroy();
 </string>
           </argument>
